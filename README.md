@@ -1,4 +1,4 @@
-#3d-cube
+#3d-scene
 
 ### To setup:
 * npm install
