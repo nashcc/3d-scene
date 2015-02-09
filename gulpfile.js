@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  open = require('gulp-open');
 
 var paths = {
   html: ['index.html'],
@@ -23,9 +24,16 @@ gulp.task('scripts', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('open', ['connect'], function(){
+  gulp.src('./index.html')
+  .pipe(open('', {
+    url: 'http://localhost:8080'
+  }));
+});
+
 gulp.task('watch', function () {
   gulp.watch(paths.html, ['html']);
   gulp.watch(paths.scripts, ['scripts']);
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('serve', ['connect', 'open', 'watch']);
