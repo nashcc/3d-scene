@@ -7,7 +7,6 @@
     1000                                    //far clipping plane
   );
   var renderer = new THREE.WebGLRenderer({
-    alpha: true,    //transparent background
     antialias: true //smooth edges
   });
 
