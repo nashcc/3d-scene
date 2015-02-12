@@ -1,8 +1,13 @@
 #3d-scene
+## Some silly Three.js examples just for fun.
 
-### To setup:
+### pre reqs
+* [io.js](https://iojs.org) or node
+* npm install -g bower gulp
+
+### to setup:
 * npm install
 * bower install
 
-### To run
+### to run
 * gulp serve
